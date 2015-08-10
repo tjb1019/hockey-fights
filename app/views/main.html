@@ -1,7 +1,15 @@
-<div ng-app class="jumbotron" ng-controller="MainCtrl">
-  <h1 class="text-center">Hockey Fights App</h1>
-  <div>
-    <input type="text" ng-model="searchText"><button ng-click="refreshVideo();">Fight</button>
-    <div ng-bind-html="iframeCode"></div>
-  </div>
+<div ng-app ng-controller="MainCtrl">
+	<div class="row">
+		<p class="lead text-center">Who would win in a bout between:</p>
+	</div>
+    <div class="row">
+  		<div class="col-xs-12 col-sm-12 col-md-5">
+  			<h3 class="text-center"><span class="label label-danger">{{ firstGuyName }}</span></h3>
+  			<img class="player-thumbnail img-responsive center-block" ng-src="{{ firstGuyImg }}" ng-click="saveUserGuess(firstGuyName); playVideo()">
+  		</div>
+  		<div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-2">
+  			<h3 class="text-center"><span class="label label-danger">{{ secondGuyName }}</span></h3>
+  			<img class="player-thumbnail img-responsive center-block" ng-src="{{ secondGuyImg }}" ng-click="saveUserGuess(secondGuyName); playVideo()">
+  		</div>
+    </div>
 </div>

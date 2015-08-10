@@ -17,7 +17,7 @@ angular.module('hockeyFightsApp')
       query: {
         method: 'GET',
         params: {
-          keywords: 'hockey+fight'
+          keywords: 'hockey fight'
         },
         isArray: false
       }

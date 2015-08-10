@@ -31,6 +31,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/gametime', {
+        templateUrl: 'views/gametime.html',
+        controller: 'GametimeCtrl',
+        controllerAs: 'gametime'
+      })
       .otherwise({
         redirectTo: '/'
       });
