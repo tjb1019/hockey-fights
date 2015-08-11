@@ -15,6 +15,7 @@ angular.module('hockeyFightsApp')
     // Public API here
     return {
       firstGuy: '',
-      secondGuy: ''
+      secondGuy: '',
+      videoHTML: ''
     };
   });
