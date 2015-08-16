@@ -3,6 +3,11 @@
 		<div ng-bind-html="iframeCode"></div>
 	</div>
 	<div class="row">
-		<p class="lead text-center">Who do you think won the fight?</p>
+		<div class="col-md-6 col-md-offset-3">
+			<p class="lead text-center">Who do you think won the fight?</p>
+			<button class="btn btn-default" type="submit" ng-click="saveUserAnswer(1)">{{ firstGuyName }}</button>
+			<button class="btn btn-default" type="submit" ng-click="saveUserAnswer(2)">{{ secondGuyName }}</button><br>
+			<a href="#/">Check out another fight!<a/>
+		</div>
 	</div>
 </div>

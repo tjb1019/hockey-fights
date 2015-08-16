@@ -8,8 +8,44 @@
  * Controller of the hockeyFightsApp
  */
 angular.module('hockeyFightsApp')
-  .controller('GametimeCtrl', function ($scope, videoData, $sce) {
+  .controller('GametimeCtrl', function ($scope, videoData, $sce, $localStorage) {
   	
+  		// Declare variables
+  		$scope.firstGuyName = videoData.firstGuy;
+  		$scope.secondGuyName = videoData.secondGuy;
+
+  		// Inject iframe HTML into gametime view
   		$scope.iframeCode = $sce.trustAsHtml(videoData.videoHTML);
+
+  		// Store user answer
+  		$scope.saveUserAnswer = function (answer) {
+  			$localStorage.userAnswer = answer;
+  			compareResults();
+  		};
+
+  		// Compare user guess to user answer
+  		function compareResults() {
+  			var guess = $localStorage.userGuess;
+  			var answer = $localStorage.userAnswer;
+
+  			// Check to see if correct guesses and wrong guesses have been initialized
+  			if(!$localStorage.correct) {
+  				$localStorage.correct = 0;
+  			}
+  			else if(!$localStorage.wrong) {
+  				$localStorage.wrong = 0;
+  			}
+
+  			// Increment correct and wrong guesses for this round
+  			if(guess == answer) {
+  				$localStorage.correct += 1;
+  			}
+  			else if(guess != answer) {
+  				$localStorage.wrong += 1;
+  			}
+  			else{
+  				console.log('Houston, we have a problem.');
+  			}
+  		};
 	    
   });
