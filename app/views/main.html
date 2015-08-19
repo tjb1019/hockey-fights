@@ -1,15 +1,15 @@
 <div ng-app ng-controller="MainCtrl">
-	<div class="row">
-		<p class="lead text-center">Who would win in a bout between:</p>
+	<div class="row" id="matchup-title">
+		<p class="text-center">Who would win in a bout between:</p>
 	</div>
-    <div class="row">
-  		<div class="col-xs-12 col-sm-12 col-md-5">
-  			<h3 class="text-center"><span class="label label-danger">{{ firstGuyName }}</span></h3>
-  			<img class="player-thumbnail img-responsive center-block" ng-src="{{ firstGuyImg }}" ng-click="saveUserGuess(1); playVideo()">
-  		</div>
-  		<div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-2">
-  			<h3 class="text-center"><span class="label label-danger">{{ secondGuyName }}</span></h3>
-  			<img class="player-thumbnail img-responsive center-block" ng-src="{{ secondGuyImg }}" ng-click="saveUserGuess(2); playVideo()">
-  		</div>
-    </div>
+  <div class="row">
+  	<div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-2">
+  		<h3 class="text-center"><span class="label">{{ firstGuyName }}</span></h3>
+  		<img class="img-responsive center-block" ng-src="{{ firstGuyImg }}" ng-click="saveUserGuess(1); playVideo()">
+  	</div>
+  	<div class="col-xs-12 col-sm-12 col-md-4">
+  		<h3 class="text-center"><span class="label">{{ secondGuyName }}</span></h3>
+  		<img class="img-responsive center-block" ng-src="{{ secondGuyImg }}" ng-click="saveUserGuess(2); playVideo()">
+  	</div>
+  </div>
 </div>

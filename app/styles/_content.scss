@@ -1,0 +1,56 @@
+// Override body default styles
+body {
+	padding: 0;
+}
+
+#body {
+	background-image: url('../images/hockey-rink-wallpaper.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-height: 85vh;
+}
+
+// Header Section
+.header {
+	background-color: $hf-light;
+	color: $hf-dark;
+	min-height: 10vh;
+	h1 {
+		margin: 0;
+		padding: 1% 0;
+		font-family: 'Sonsie One', cursive;
+	}
+}
+
+// Views
+// MATCHUP
+
+#matchup-title {
+	p {
+		margin: 5% 0;
+		color: $hf-white;
+		font-family: 'PT Sans', sans-serif;
+		font-size: 200%;
+	}
+}
+
+.label {
+	font-family: $label-font;
+	font-size: 150%;
+}
+
+// GAMETIME
+
+// Footer Section
+.footer {
+	background-color: $hf-light;
+	color: $hf-dark;
+	min-height: 5vh;
+	line-height: 5vh;
+	p {
+		padding: 0;
+		margin: 0;
+		font-style: italic;
+	}
+}
