@@ -42,6 +42,20 @@ body {
 
 // GAMETIME
 
+#youtube-player {
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+#final-selection {
+	text-align: center;
+	p {
+		color: $hf-dark-blue;
+		font-family: 'PT Sans', sans-serif;
+		font-size: 200%;
+	}
+}
+
 // Footer Section
 .footer {
 	background-color: $hf-light;
