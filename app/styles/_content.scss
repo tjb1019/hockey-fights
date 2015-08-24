@@ -23,6 +23,9 @@ body {
 	}
 }
 
+// Scoreboard
+
+
 // Views
 // MATCHUP
 
@@ -50,9 +53,18 @@ body {
 #final-selection {
 	text-align: center;
 	p {
-		color: $hf-dark-blue;
-		font-family: 'PT Sans', sans-serif;
+		color: $hf-white;
+		font-family: $label-font;
 		font-size: 200%;
+		margin-bottom: 0;
+	}
+	button {
+	border-radius: 0;
+	padding: 1% 3%;
+	margin: 2%;
+	background-color: $hf-dark;
+	color: $hf-white;
+	font-family: 'PT Sans', sans-serif;
 	}
 }
 

@@ -13,6 +13,17 @@ angular.module('hockeyFightsApp')
     var playerMatchups = MATCHUPS;
     $scope.userGuess;
 
+    // Check to see if correct guesses and wrong guesses have been initialized
+    if(!$localStorage.correct) {
+        $localStorage.correct = 0;
+    }
+    else if(!$localStorage.wrong) {
+        $localStorage.wrong = 0;
+    }
+
+    $scope.correct = $localStorage.correct;
+    $scope.wrong = $localStorage.wrong;
+
     // Pick a matchup for this round and make player names/images available in scope
     var thisRound = playerMatchups[Math.floor(Math.random() * playerMatchups.length)];
     $scope.firstGuyName = thisRound.player1.name;
