@@ -1,0 +1,19 @@
+#matchup-title {
+	p {
+		margin: 5% 0;
+		color: $hf-white;
+		font-family: 'PT Sans', sans-serif;
+		font-size: 200%;
+	}
+}
+
+.label {
+	font-family: $label-font;
+	font-size: 150%;
+}
+
+.player-col {
+	img:last-child {
+		margin-bottom: 5%;
+	}
+}

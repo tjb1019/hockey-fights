@@ -9,4 +9,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 // Stylesheets
 @import "transitions";
-@import "content";
+@import "global";
+@import "main-view";
+@import "gametime";

@@ -1,0 +1,49 @@
+#youtube-player {
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+#final-selection {
+	text-align: center;
+	p {
+		color: $hf-white;
+		font-family: $label-font;
+		font-size: 200%;
+		margin-bottom: 0;
+	}
+	button {
+		border-radius: 0;
+		padding: 1% 3%;
+		margin: 2%;
+		box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.4);
+		background-color: $hf-dark;
+		color: $hf-white;
+		font-family: 'PT Sans', sans-serif;
+	}
+}
+
+#crowd {
+	img {
+		width: 100%;
+		height: 100px;
+		position: absolute;
+		bottom: 5vh;
+	}
+}
+
+// Mobile Styles
+@media (max-width: 768px) {
+	#crowd {
+		img {
+			width: 100%;
+			height: 100px;
+			position: absolute;
+			bottom: 2vh;
+		}
+	}
+	#youtube-player {
+		margin-top: 3%;
+		margin-bottom: 3%;
+		width: 90%;
+	}
+}
