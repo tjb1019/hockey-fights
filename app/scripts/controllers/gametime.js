@@ -13,6 +13,8 @@ angular.module('hockeyFightsApp')
   		// Declare variables
   		$scope.firstGuyName = videoData.firstGuy;
   		$scope.secondGuyName = videoData.secondGuy;
+      $scope.youRight = $localStorage.correct;
+      $scope.youWrong = $localStorage.wrong;
 
   		// Inject iframe HTML into gametime view
   		$scope.iframeCode = $sce.trustAsHtml(videoData.videoHTML);
@@ -39,9 +41,11 @@ angular.module('hockeyFightsApp')
   			// Increment correct and wrong guesses for this round
   			if(guess == answer) {
   				$localStorage.correct += 1;
+          $scope.youRight = $localStorage.correct;
   			}
   			else if(guess != answer) {
   				$localStorage.wrong += 1;
+          $scope.youWrong = $localStorage.wrong;
   			}
   			else{
   				console.log('Houston, we have a problem.');

@@ -20,6 +20,15 @@
 	}
 }
 
+#scoreboard {
+	position: absolute;
+	right: 0;
+	top: 20vh;
+	p {
+		color: $hf-white;
+	}
+}
+
 #final-selection {
 	text-align: center;
 	p {
