@@ -5,7 +5,7 @@
 
 #zamboni {
 	position: absolute;
-	right: 1vw;
+	right: 2vw;
 	bottom: 25vh;
 	img {
 		height: 150px;
@@ -21,11 +21,16 @@
 }
 
 #scoreboard {
-	position: absolute;
-	right: 0;
-	top: 20vh;
+	text-align: center;
 	p {
-		color: $hf-white;
+		display: inline;
+		color: $hf-light-blue;
+		font-family: $label-font;
+		font-size: 200%;
+		span {
+			color: $hf-white;
+			padding: 0;
+		}
 	}
 }
 
@@ -51,25 +56,37 @@
 #crowd {
 	img {
 		width: 100%;
-		height: 100px;
+		height: 120px;
 		position: absolute;
-		bottom: 5vh;
+		bottom: 0;
 	}
 }
 
 // Mobile Styles
 @media (max-width: 768px) {
+	#scoreboard {
+		margin-top: 3%;
+	}
 	#crowd {
 		img {
-			width: 100%;
 			height: 100px;
-			position: absolute;
-			bottom: 2vh;
+			position: relative;
 		}
 	}
 	#youtube-player {
 		margin-top: 3%;
 		margin-bottom: 3%;
 		width: 90%;
+	}
+	#zamboni {
+		position: relative;
+		right: auto;
+		bottom: auto;
+		img {
+			height: 100px;
+			width: 150px;
+			margin-top: 2%;
+			margin-left: 6%;
+		}
 	}
 }

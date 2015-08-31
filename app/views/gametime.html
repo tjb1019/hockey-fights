@@ -1,11 +1,11 @@
 <div ng-app ng-controller="GametimeCtrl">
-	<div id="zamboni">
-		<img src="images/snoopy-zamboni.gif">
-		<a href="#/">Next fight!<a/>
-	</div>
-	<div id="scoreboard">
-		<p>You Right: <span ng-bind="youRight"></span></p>
-		<p>You Wrong: <span ng-bind="youWrong"></span></p>
+	<div class="row" id="scoreboard">
+		<div class="col-xs-2 col-xs-offset-4 col-md-2 col-md-offset-4">
+			<p>Wins<br><span ng-bind="youRight"></span></p>
+		</div>
+		<div class="col-xs-2 col-md-2">
+			<p>Losses<br><span ng-bind="youWrong"></span></p>
+		</div>
 	</div>
 	<div class="row">
 		<div ng-bind-html="iframeCode"></div>
@@ -16,6 +16,10 @@
 			<button class="btn btn-default btn-lg" type="submit" ng-click="saveUserAnswer(1)">{{ firstGuyName }}</button>
 			<button class="btn btn-default btn-lg" type="submit" ng-click="saveUserAnswer(2)">{{ secondGuyName }}</button><br>
 		</div>
+	</div>
+	<div class="row" id="zamboni">
+		<img src="images/snoopy-zamboni.gif">
+		<a href="#/">Next fight!<a/>
 	</div>
 	<div class="row" id="crowd">
 		<img src="images/crowd-silhoutte.png">
