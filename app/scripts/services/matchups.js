@@ -58,5 +58,75 @@ angular.module('hockeyFightsApp')
           name: 'Riley Cote',
           img: 'images/riley-cote.jpg'
         }
+    },
+    {
+        player1: {
+          name: 'Peter Worrell',
+          img: 'images/peter-worrell.jpg'
+        },
+        player2: {
+          name: 'Aaron Downey',
+          img: 'images/aaron-downey.jpg'
+        }
+    },
+    {
+        player1: {
+          name: 'Peter Worrell',
+          img: 'images/peter-worrell.jpg'
+        },
+        player2: {
+          name: 'Reed Low',
+          img: 'images/reed-low.jpg'
+        }
+    },
+    {
+        player1: {
+          name: 'Colton Orr',
+          img: 'images/colton-orr.jpg'
+        },
+        player2: {
+          name: 'Matt Carkner',
+          img: 'images/matt-carkner.jpg'
+        }
+    },
+    {
+        player1: {
+          name: 'Colton Orr',
+          img: 'images/colton-orr.jpg'
+        },
+        player2: {
+          name: 'Eric Godard',
+          img: 'images/eric-godard.jpg'
+        }
+    },
+    {
+        player1: {
+          name: 'Zenon Konopka',
+          img: 'images/zenon-konopka.jpg'
+        },
+        player2: {
+          name: 'Nick Tarnasky',
+          img: 'images/nick-tarnasky.jpg'
+        }
+    },
+    {
+        player1: {
+          name: 'Zenon Konopka',
+          img: 'images/zenon-konopka.jpg'
+        },
+        player2: {
+          name: 'Zack Stortini',
+          img: 'images/zack-stortini.jpg'
+        }
+    },
+    {
+        player1: {
+          name: 'George Parros',
+          img: 'images/george-parros.jpg'
+        },
+        player2: {
+          name: 'Todd Fedoruk',
+          img: 'images/todd-fedoruk.jpg'
+        }
     }
   ]);
