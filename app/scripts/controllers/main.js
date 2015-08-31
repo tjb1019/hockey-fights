@@ -11,18 +11,6 @@ angular.module('hockeyFightsApp')
   .controller('MainCtrl', function ($scope, sinBin, videoData, MATCHUPS, $sce, $location, $localStorage) {
     // Declare variables
     var playerMatchups = MATCHUPS;
-    $scope.userGuess;
-
-    // Check to see if correct guesses and wrong guesses have been initialized
-    if(!$localStorage.correct) {
-        $localStorage.correct = 0;
-    }
-    else if(!$localStorage.wrong) {
-        $localStorage.wrong = 0;
-    }
-
-    $scope.correct = $localStorage.correct;
-    $scope.wrong = $localStorage.wrong;
 
     // Pick a matchup for this round and make player names/images available in scope
     var thisRound = playerMatchups[Math.floor(Math.random() * playerMatchups.length)];
@@ -34,20 +22,20 @@ angular.module('hockeyFightsApp')
     // Make API call now while user is making a selection
     var hipCheck = sinBin.query({keywords: $scope.firstGuyName + '+' + $scope.secondGuyName + 'fight'});
     hipCheck.$promise.then(function(data) {
+        // Choose 1 of 3 possible videos so user can see different fights with the same players
         var videoId = data.items[Math.floor(Math.random() * 3)].id.videoId;
+        // Generate iframe code and insert into resource for gametime view to use.  Insert player names for current matchup as well
         var thisVideo = '<iframe width="420" height="315" src="http://www.youtube.com/embed/' + videoId + '?autoplay=1" frameborder="0" allowfullscreen class="center-block" id="youtube-player"></iframe>';
         videoData.videoHTML = thisVideo;
+        videoData.firstGuy = $scope.firstGuyName;
+        videoData.secondGuy = $scope.secondGuyName;
     });
-
-    // Update videoData so that new video can be loaded into gametime view
-    videoData.firstGuy = $scope.firstGuyName;
-    videoData.secondGuy = $scope.secondGuyName;
 
     $scope.saveUserGuess = function(guess) {
         $localStorage.userGuess = guess;
     };
 
-    $scope.playVideo = function() {
-        $location.path('/gametime');
+    $scope.changeView = function(view) {
+        $location.path(view);
     };
   });
