@@ -21,16 +21,17 @@ angular.module('hockeyFightsApp')
 
   		// Store user answer
   		$scope.saveUserAnswer = function (answer) {
-  			$localStorage.userAnswer = answer;
+        $localStorage.userAnswer = answer;
   			compareResults();
   		};
 
   		// Compare user guess to user answer
   		function compareResults() {
-  			var guess = $localStorage.userGuess;
+        // Declare variables
+        var guess = $localStorage.userGuess;
   			var answer = $localStorage.userAnswer;
 
-  			// Check to see if correct guesses and wrong guesses have been initialized
+        // Check to see if correct guesses and wrong guesses have been initialized
   			if(!$localStorage.correct) {
   				$localStorage.correct = 0;
   			}
