@@ -16,17 +16,18 @@ angular.module('hockeyFightsApp')
     $scope.firstGuyImg = thisRound.player1.img;
     $scope.secondGuyName = thisRound.player2.name;
     $scope.secondGuyImg = thisRound.player2.img;
+    // Insert player names into videoData resource for gametime view to use
+    videoData.firstGuy = thisRound.player1.name;
+    videoData.secondGuy = thisRound.player2.name;
 
     // Make API call now while user is making a selection
-    var hipCheck = sinBin.query({keywords: $scope.firstGuyName + '+' + $scope.secondGuyName + 'fight'});
+    var hipCheck = sinBin.query({keywords: thisRound.player1.name + '+' + thisRound.player2.name});
     hipCheck.$promise.then(function(data) {
         // Choose 1 of 2 possible videos so user can see different fights with the same players
         var videoId = data.items[Math.floor(Math.random() * 1)].id.videoId;
-        // Generate iframe code and insert into resource for gametime view to use.  Insert player names for current matchup as well
+        // Generate iframe code and insert into videoData resource for gametime view to use
         var thisVideo = '<iframe width="420" height="315" src="http://www.youtube.com/embed/' + videoId + '?autoplay=1" frameborder="0" allowfullscreen class="center-block" id="youtube-player"></iframe>';
         videoData.videoHTML = thisVideo;
-        videoData.firstGuy = $scope.firstGuyName;
-        videoData.secondGuy = $scope.secondGuyName;
     });
 
     $scope.saveUserGuess = function(guess) {
