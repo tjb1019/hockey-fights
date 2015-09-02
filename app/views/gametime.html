@@ -11,13 +11,13 @@
 		<div ng-bind-html="iframeCode"></div>
 	</div>
 	<div class="row">
-		<div class="col-md-6 col-md-offset-3" id="final-selection">
+		<div class="col-md-6 col-md-offset-3" id="final-selection" ng-show="canVote">
 			<p class="lead">Who do you think won the fight?</p>
 			<button class="btn btn-default btn-lg" type="submit" ng-click="saveUserAnswer(1)">{{ firstGuyName }}</button>
 			<button class="btn btn-default btn-lg" type="submit" ng-click="saveUserAnswer(2)">{{ secondGuyName }}</button><br>
 		</div>
 	</div>
-	<div class="row" id="zamboni">
+	<div class="row" id="zamboni" ng-hide="canVote">
 		<img src="images/snoopy-zamboni.gif">
 		<a href="#/">Next fight!<a/>
 	</div>

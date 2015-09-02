@@ -15,6 +15,7 @@ angular.module('hockeyFightsApp')
   		$scope.secondGuyName = videoData.secondGuy;
       $scope.youRight = $localStorage.correct;
       $scope.youWrong = $localStorage.wrong;
+      $scope.canVote = true;
 
   		// Inject iframe HTML into gametime view
   		$scope.iframeCode = $sce.trustAsHtml(videoData.videoHTML);
@@ -23,6 +24,7 @@ angular.module('hockeyFightsApp')
   		$scope.saveUserAnswer = function (answer) {
         $localStorage.userAnswer = answer;
   			compareResults();
+        $scope.canVote = false;
   		};
 
   		// Compare user guess to user answer
